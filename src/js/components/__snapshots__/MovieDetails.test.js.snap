@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie details component should have image 1`] = `
+<article>
+  <dl>
+    <dd>
+      Rating:
+    </dd>
+    <dt>
+      6.4
+       (
+      4976
+       votes)
+    </dt>
+    <dd>
+      Genres:
+    </dd>
+    <dt>
+      Family,Animation
+    </dt>
+    <dd>
+      Release date:
+    </dd>
+    <dt>
+      2015-06-17
+    </dt>
+  </dl>
+  <img
+    src="https://image.tmdb.org/t/p/w154/q0R4crx2SehcEEQEkYObktdeFy.jpg"
+  />
+  <p>
+    Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill...
+  </p>
+</article>
+`;
+
+exports[`Movie details component shouldn't have image 1`] = `
+<article>
+  <dl>
+    <dd>
+      Rating:
+    </dd>
+    <dt>
+      6.4
+       (
+      4976
+       votes)
+    </dt>
+    <dd>
+      Genres:
+    </dd>
+    <dt>
+      Family,Animation
+    </dt>
+    <dd>
+      Release date:
+    </dd>
+    <dt>
+      2015-06-17
+    </dt>
+  </dl>
+  
+  <p>
+    Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill...
+  </p>
+</article>
+`;

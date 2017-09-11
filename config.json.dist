@@ -1,0 +1,13 @@
+{
+  "movieDb": {
+    "apiKey": "",
+    "url": "https://api.themoviedb.org/3/",
+    "images": {
+      "url": "https://image.tmdb.org/t/p/",
+      "size": {
+        "small": "w45",
+        "big": "w154"
+      }
+    }
+  }
+}

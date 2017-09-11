@@ -1,2 +1,1 @@
-# movie-info
-Simple movie search website
+# Movie search web page [![Build Status](https://travis-ci.org/dawid-drelichowski/movie-info.svg?branch=master)](https://travis-ci.org/dawid-drelichowski/movie-info) [![bitHound Overall Score](https://www.bithound.io/github/dawid-drelichowski/movie-info/badges/score.svg)](https://www.bithound.io/github/dawid-drelichowski/movie-info)

@@ -13,7 +13,7 @@ export default class MovieDetails extends Component {
         <dd>Rating:</dd>
         <dt>{data.vote_average} ({data.vote_count} votes)</dt>
         <dd>Genres:</dd>
-        <dt>{data.genres.map(genre => genre.name).join(',')}</dt>
+        <dt>{data.genres.map(genre => genre.name).join(', ')}</dt>
         <dd>Release date:</dd>
         <dt>{data.release_date}</dt>
       </dl>

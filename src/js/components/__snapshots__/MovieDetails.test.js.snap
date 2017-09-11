@@ -16,7 +16,7 @@ exports[`Movie details component should have image 1`] = `
       Genres:
     </dd>
     <dt>
-      Family,Animation
+      Family, Animation
     </dt>
     <dd>
       Release date:
@@ -50,7 +50,7 @@ exports[`Movie details component shouldn't have image 1`] = `
       Genres:
     </dd>
     <dt>
-      Family,Animation
+      Family, Animation
     </dt>
     <dd>
       Release date:

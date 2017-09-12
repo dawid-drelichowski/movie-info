@@ -12,7 +12,11 @@ describe('Movie list component', () => {
     )
   }
 
-  it('should contains 4 movies', () => {
+  it('should contain 1 movie', () => {
+    expect(getRenderedComponent(search.results.slice(-1)).toJSON()).toMatchSnapshot()
+  })
+
+  it('should contain 4 movies', () => {
     expect(getRenderedComponent(search.results).toJSON()).toMatchSnapshot()
   })
 })

@@ -1,6 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Movie list component should contains 4 movies 1`] = `
+exports[`Movie list component should contain 1 movie 1`] = `
+<ul>
+  <li
+    onClick={[Function]}
+  >
+    <strong>
+      Minions: Puppy
+    </strong>
+    <img
+      src="https://image.mock.api/small/maBSw4YgUzjQoowiMI51FG0Npzc.jpg"
+    />
+    
+  </li>
+</ul>
+`;
+
+exports[`Movie list component should contain 4 movies 1`] = `
 <ul>
   <li
     onClick={[Function]}

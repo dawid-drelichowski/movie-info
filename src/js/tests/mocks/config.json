@@ -1,0 +1,13 @@
+{
+  "movieDb": {
+    "apiKey": "mock_api_key",
+    "url": "https://mock.api/",
+    "images": {
+      "url": "https://image.mock.api/",
+      "size": {
+        "small": "small",
+        "big": "big"
+      }
+    }
+  }
+}

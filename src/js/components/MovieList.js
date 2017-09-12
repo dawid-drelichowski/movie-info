@@ -12,10 +12,12 @@ export default class MovieList extends Component {
     movies: []
   }
   render () {
-    return <ul>
-      {this.props.movies.map(movie => {
-        return <Movie key={movie.id} config={this.props.config} repository={this.props.repository} data={movie}/>
-      })}
-    </ul>
+    return <div className="form-row">
+      <ul className="col-12 list-group">
+        {this.props.movies.map(movie => {
+          return <Movie key={movie.id} config={this.props.config} repository={this.props.repository} data={movie}/>
+        })}
+      </ul>
+    </div>
   }
 }

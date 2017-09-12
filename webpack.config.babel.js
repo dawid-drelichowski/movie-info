@@ -1,7 +1,10 @@
 import path from 'path'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 export default {
   entry: [
+    './node_modules/bootstrap/dist/css/bootstrap.css',
+    './src/css/main.css',
     'babel-polyfill',
     './src/js/index.js'
   ],
@@ -14,7 +17,9 @@ export default {
   },
   module: {
     rules: [
+      {test: /\.css$/, use: ExtractTextPlugin.extract({fallback: 'style-loader', use: 'css-loader'})},
       {test: /\.js$/, exclude: /node_modules|config.json/, loader: 'babel-loader'}
     ]
-  }
+  },
+  plugins: [new ExtractTextPlugin('css/[name].css')]
 }

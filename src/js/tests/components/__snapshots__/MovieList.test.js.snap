@@ -1,66 +1,93 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Movie list component should contain 1 movie 1`] = `
-<ul>
-  <li
-    onClick={[Function]}
+<div
+  className="form-row"
+>
+  <ul
+    className="col-12 list-group"
   >
-    <strong>
-      Minions: Puppy
-    </strong>
-    <img
-      src="https://image.mock.api/small/maBSw4YgUzjQoowiMI51FG0Npzc.jpg"
-    />
-    
-  </li>
-</ul>
+    <li
+      className="list-group-item"
+      onClick={[Function]}
+    >
+      <strong>
+        Minions: Puppy
+      </strong>
+      <img
+        alt="Minions: Puppy"
+        className="rounded img-thumbnail float-right"
+        src="https://image.mock.api/small/maBSw4YgUzjQoowiMI51FG0Npzc.jpg"
+      />
+      
+    </li>
+  </ul>
+</div>
 `;
 
 exports[`Movie list component should contain 4 movies 1`] = `
-<ul>
-  <li
-    onClick={[Function]}
+<div
+  className="form-row"
+>
+  <ul
+    className="col-12 list-group"
   >
-    <strong>
-      Minions
-    </strong>
-    <img
-      src="https://image.mock.api/small/q0R4crx2SehcEEQEkYObktdeFy.jpg"
-    />
-    
-  </li>
-  <li
-    onClick={[Function]}
-  >
-    <strong>
-      Minions: Competition
-    </strong>
-    <img
-      src="https://image.mock.api/small/d7wrcnERHpa6fA3rhvTllIitGRm.jpg"
-    />
-    
-  </li>
-  <li
-    onClick={[Function]}
-  >
-    <strong>
-      Mower Minions
-    </strong>
-    <img
-      src="https://image.mock.api/small/Ao9clrCn3Ct4a92amHWzfnOCLCh.jpg"
-    />
-    
-  </li>
-  <li
-    onClick={[Function]}
-  >
-    <strong>
-      Minions: Puppy
-    </strong>
-    <img
-      src="https://image.mock.api/small/maBSw4YgUzjQoowiMI51FG0Npzc.jpg"
-    />
-    
-  </li>
-</ul>
+    <li
+      className="list-group-item"
+      onClick={[Function]}
+    >
+      <strong>
+        Minions
+      </strong>
+      <img
+        alt="Minions"
+        className="rounded img-thumbnail float-right"
+        src="https://image.mock.api/small/q0R4crx2SehcEEQEkYObktdeFy.jpg"
+      />
+      
+    </li>
+    <li
+      className="list-group-item"
+      onClick={[Function]}
+    >
+      <strong>
+        Minions: Competition
+      </strong>
+      <img
+        alt="Minions: Competition"
+        className="rounded img-thumbnail float-right"
+        src="https://image.mock.api/small/d7wrcnERHpa6fA3rhvTllIitGRm.jpg"
+      />
+      
+    </li>
+    <li
+      className="list-group-item"
+      onClick={[Function]}
+    >
+      <strong>
+        Mower Minions
+      </strong>
+      <img
+        alt="Mower Minions"
+        className="rounded img-thumbnail float-right"
+        src="https://image.mock.api/small/Ao9clrCn3Ct4a92amHWzfnOCLCh.jpg"
+      />
+      
+    </li>
+    <li
+      className="list-group-item"
+      onClick={[Function]}
+    >
+      <strong>
+        Minions: Puppy
+      </strong>
+      <img
+        alt="Minions: Puppy"
+        className="rounded img-thumbnail float-right"
+        src="https://image.mock.api/small/maBSw4YgUzjQoowiMI51FG0Npzc.jpg"
+      />
+      
+    </li>
+  </ul>
+</div>
 `;

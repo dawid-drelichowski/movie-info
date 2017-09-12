@@ -1,0 +1,84 @@
+{
+  "page": 1,
+  "total_results": 19,
+  "total_pages": 1,
+  "results": [
+    {
+      "vote_count": 4381,
+      "id": 211672,
+      "video": false,
+      "vote_average": 6.4,
+      "title": "Minions",
+      "popularity": 1212.542919,
+      "poster_path": "/q0R4crx2SehcEEQEkYObktdeFy.jpg",
+      "original_language": "en",
+      "original_title": "Minions",
+      "genre_ids": [
+        10751,
+        16,
+        12,
+        35
+      ],
+      "backdrop_path": "/uX7LXnsC7bZJZjn048UCOwkPXWJ.jpg",
+      "adult": false,
+      "overview": "Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill, a super-villain who, alongside her inventor husband Herb, hatches a plot to take over the world.",
+      "release_date": "2015-06-17"
+    },
+    {
+      "vote_count": 34,
+      "id": 366142,
+      "video": false,
+      "vote_average": 5.7,
+      "title": "Minions: Competition",
+      "popularity": 4.096295,
+      "poster_path": "/d7wrcnERHpa6fA3rhvTllIitGRm.jpg",
+      "original_language": "en",
+      "original_title": "Minions: Competition",
+      "genre_ids": [
+        16
+      ],
+      "backdrop_path": "/rsxhLIqVwMxlas5QoXSHcahPyOa.jpg",
+      "adult": false,
+      "overview": "Two minions working in a bomb lab get competitive.",
+      "release_date": "2015-11-04"
+    },
+    {
+      "vote_count": 53,
+      "id": 403052,
+      "video": false,
+      "vote_average": 6.7,
+      "title": "Mower Minions",
+      "popularity": 3.62435,
+      "poster_path": "/Ao9clrCn3Ct4a92amHWzfnOCLCh.jpg",
+      "original_language": "en",
+      "original_title": "Mower Minions",
+      "genre_ids": [
+        35,
+        16
+      ],
+      "backdrop_path": "/2r2pw6qR9E84t21NHxbYXzoEFpi.jpg",
+      "adult": false,
+      "overview": "The Minions need to raise $20 to purchase an as seen on TV banana blender. So they take up lawn mowing at an old folks home, with hilarious antics!",
+      "release_date": "2016-07-08"
+    },
+    {
+      "vote_count": 97,
+      "id": 229407,
+      "video": false,
+      "vote_average": 7.6,
+      "title": "Minions: Puppy",
+      "popularity": 3.622487,
+      "poster_path": "/maBSw4YgUzjQoowiMI51FG0Npzc.jpg",
+      "original_language": "en",
+      "original_title": "Minions: Puppy",
+      "genre_ids": [
+        16,
+        10751
+      ],
+      "backdrop_path": "/eAKzsYVHiC0bSNudVo9IgREurmm.jpg",
+      "adult": false,
+      "overview": "A Minion, seeing many owners walk their dogs, wants a puppy of his own. He tries to leash a ladybug but fails. Luckily, a UFO that sweeps away the ladybug somehow agrees to become a Puppy.",
+      "release_date": "2013-12-10"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie list component should contains 4 movies 1`] = `
+<ul>
+  <li
+    onClick={[Function]}
+  >
+    <strong>
+      Minions
+    </strong>
+    <img
+      src="https://image.mock.api/small/q0R4crx2SehcEEQEkYObktdeFy.jpg"
+    />
+    
+  </li>
+  <li
+    onClick={[Function]}
+  >
+    <strong>
+      Minions: Competition
+    </strong>
+    <img
+      src="https://image.mock.api/small/d7wrcnERHpa6fA3rhvTllIitGRm.jpg"
+    />
+    
+  </li>
+  <li
+    onClick={[Function]}
+  >
+    <strong>
+      Mower Minions
+    </strong>
+    <img
+      src="https://image.mock.api/small/Ao9clrCn3Ct4a92amHWzfnOCLCh.jpg"
+    />
+    
+  </li>
+  <li
+    onClick={[Function]}
+  >
+    <strong>
+      Minions: Puppy
+    </strong>
+    <img
+      src="https://image.mock.api/small/maBSw4YgUzjQoowiMI51FG0Npzc.jpg"
+    />
+    
+  </li>
+</ul>
+`;

@@ -9,14 +9,14 @@ exports[`Movie details component should have image 1`] = `
     <dt>
       6.4
        (
-      4976
+      4412
        votes)
     </dt>
     <dd>
       Genres:
     </dd>
     <dt>
-      Family, Animation
+      Family, Animation, Adventure, Comedy
     </dt>
     <dd>
       Release date:
@@ -26,10 +26,10 @@ exports[`Movie details component should have image 1`] = `
     </dt>
   </dl>
   <img
-    src="https://image.tmdb.org/t/p/w154/q0R4crx2SehcEEQEkYObktdeFy.jpg"
+    src="https://image.mock.api/big/q0R4crx2SehcEEQEkYObktdeFy.jpg"
   />
   <p>
-    Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill...
+    Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill, a super-villain who, alongside her inventor husband Herb, hatches a plot to take over the world.
   </p>
 </article>
 `;
@@ -43,14 +43,14 @@ exports[`Movie details component shouldn't have image 1`] = `
     <dt>
       6.4
        (
-      4976
+      4412
        votes)
     </dt>
     <dd>
       Genres:
     </dd>
     <dt>
-      Family, Animation
+      Family, Animation, Adventure, Comedy
     </dt>
     <dd>
       Release date:
@@ -61,7 +61,7 @@ exports[`Movie details component shouldn't have image 1`] = `
   </dl>
   
   <p>
-    Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill...
+    Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill, a super-villain who, alongside her inventor husband Herb, hatches a plot to take over the world.
   </p>
 </article>
 `;

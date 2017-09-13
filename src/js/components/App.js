@@ -9,11 +9,11 @@ export default class App extends Component {
     config: PropTypes.object.isRequired,
     repository: PropTypes.instanceOf(Repository).isRequired
   }
-  state = {movies: []}
+  state = {movies: {}}
   searchMovies = async query => {
-    const result = await this.props.repository.searchMoviesByQuery(query)
-    if (result && result.results) {
-      this.setState({movies: result.results})
+    const movies = await this.props.repository.searchMoviesByQuery(query)
+    if (movies) {
+      this.setState({movies})
     }
   }
   render () {

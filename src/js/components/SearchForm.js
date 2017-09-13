@@ -9,9 +9,14 @@ export default class SearchForm extends Component {
     onSubmit: () => {}
   }
   state = {query: ''}
+  lastSubmittedQuery = ''
   onSubmit = event => {
+    const query = this.state.query.trim()
     event.preventDefault()
-    this.props.onSubmit(this.state.query)
+    if (query && query !== this.lastSubmittedQuery) {
+      this.lastSubmittedQuery = query
+      this.props.onSubmit(query)
+    }
   }
   changeQuery = event => this.setState({query: event.target.value})
   render () {

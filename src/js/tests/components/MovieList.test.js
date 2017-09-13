@@ -12,11 +12,17 @@ describe('Movie list component', () => {
     )
   }
 
-  it('should contain 1 movie', () => {
-    expect(getRenderedComponent(search.results.slice(-1)).toJSON()).toMatchSnapshot()
+  it('should be empty', () => {
+    expect(getRenderedComponent({}).toJSON()).toMatchSnapshot()
+  })
+
+  it('should display "no results"', () => {
+    const data = {...search}
+    data.total_results = 0
+    expect(getRenderedComponent(data).toJSON()).toMatchSnapshot()
   })
 
   it('should contain 4 movies', () => {
-    expect(getRenderedComponent(search.results).toJSON()).toMatchSnapshot()
+    expect(getRenderedComponent(search).toJSON()).toMatchSnapshot()
   })
 })

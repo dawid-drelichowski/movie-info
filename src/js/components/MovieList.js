@@ -6,18 +6,33 @@ export default class MovieList extends Component {
   static propTypes = {
     config: PropTypes.object.isRequired,
     repository: PropTypes.object.isRequired,
-    movies: PropTypes.array
+    movies: PropTypes.object
   }
   static defaultProps = {
-    movies: []
+    movies: {}
   }
   render () {
-    return <div className="form-row">
-      <ul className="col-12 list-group">
-        {this.props.movies.map(movie => {
-          return <Movie key={movie.id} config={this.props.config} repository={this.props.repository} data={movie}/>
-        })}
+    return <div className="form-row mt-3">
+      <ul className="col-12 list-group movies-list">
+        {this.renderList()}
       </ul>
     </div>
+  }
+  renderList () {
+    if (!Object.keys(this.props.movies).length) {
+      return ''
+    }
+    if (this.props.movies.total_results > 0) {
+      return this.props.movies.results.map(movie => this.renderMovie(movie))
+    }
+    return this.renderNoMovie()
+  }
+  renderMovie (movie) {
+    return <Movie key={movie.id} config={this.props.config} repository={this.props.repository} data={movie}/>
+  }
+  renderNoMovie () {
+    return <li className="list-group-item">
+      <strong>There are no movies that matched your query.</strong>
+    </li>
   }
 }

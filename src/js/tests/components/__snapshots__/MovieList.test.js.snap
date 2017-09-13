@@ -1,39 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Movie list component should contain 1 movie 1`] = `
+exports[`Movie list component should be empty 1`] = `
 <div
-  className="form-row"
+  className="form-row mt-3"
 >
   <ul
-    className="col-12 list-group"
+    className="col-12 list-group movies-list"
   >
-    <li
-      className="list-group-item"
-      onClick={[Function]}
-    >
-      <strong>
-        Minions: Puppy
-      </strong>
-      <img
-        alt="Minions: Puppy"
-        className="rounded img-thumbnail float-right"
-        src="https://image.mock.api/small/maBSw4YgUzjQoowiMI51FG0Npzc.jpg"
-      />
-      
-    </li>
+    
   </ul>
 </div>
 `;
 
 exports[`Movie list component should contain 4 movies 1`] = `
 <div
-  className="form-row"
+  className="form-row mt-3"
 >
   <ul
-    className="col-12 list-group"
+    className="col-12 list-group movies-list"
   >
     <li
-      className="list-group-item"
+      className="list-group-item list-group-item-action movie"
       onClick={[Function]}
     >
       <strong>
@@ -41,13 +28,13 @@ exports[`Movie list component should contain 4 movies 1`] = `
       </strong>
       <img
         alt="Minions"
-        className="rounded img-thumbnail float-right"
-        src="https://image.mock.api/small/q0R4crx2SehcEEQEkYObktdeFy.jpg"
+        className="rounded float-right"
+        src="https://image.mock.api/small/uX7LXnsC7bZJZjn048UCOwkPXWJ.jpg"
       />
       
     </li>
     <li
-      className="list-group-item"
+      className="list-group-item list-group-item-action movie"
       onClick={[Function]}
     >
       <strong>
@@ -55,13 +42,13 @@ exports[`Movie list component should contain 4 movies 1`] = `
       </strong>
       <img
         alt="Minions: Competition"
-        className="rounded img-thumbnail float-right"
-        src="https://image.mock.api/small/d7wrcnERHpa6fA3rhvTllIitGRm.jpg"
+        className="rounded float-right"
+        src="https://image.mock.api/small/rsxhLIqVwMxlas5QoXSHcahPyOa.jpg"
       />
       
     </li>
     <li
-      className="list-group-item"
+      className="list-group-item list-group-item-action movie"
       onClick={[Function]}
     >
       <strong>
@@ -69,13 +56,13 @@ exports[`Movie list component should contain 4 movies 1`] = `
       </strong>
       <img
         alt="Mower Minions"
-        className="rounded img-thumbnail float-right"
-        src="https://image.mock.api/small/Ao9clrCn3Ct4a92amHWzfnOCLCh.jpg"
+        className="rounded float-right"
+        src="https://image.mock.api/small/2r2pw6qR9E84t21NHxbYXzoEFpi.jpg"
       />
       
     </li>
     <li
-      className="list-group-item"
+      className="list-group-item list-group-item-action movie"
       onClick={[Function]}
     >
       <strong>
@@ -83,10 +70,28 @@ exports[`Movie list component should contain 4 movies 1`] = `
       </strong>
       <img
         alt="Minions: Puppy"
-        className="rounded img-thumbnail float-right"
-        src="https://image.mock.api/small/maBSw4YgUzjQoowiMI51FG0Npzc.jpg"
+        className="rounded float-right"
+        src="https://image.mock.api/small/eAKzsYVHiC0bSNudVo9IgREurmm.jpg"
       />
       
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Movie list component should display "no results" 1`] = `
+<div
+  className="form-row mt-3"
+>
+  <ul
+    className="col-12 list-group movies-list"
+  >
+    <li
+      className="list-group-item"
+    >
+      <strong>
+        There are no movies that matched your query.
+      </strong>
     </li>
   </ul>
 </div>

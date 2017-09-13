@@ -9,17 +9,17 @@ export default class MovieDetails extends Component {
   render () {
     const config = this.props.config.movieDb.images,
       details = this.props.details
-    return <article>
+    return <article className="py-3">
+      {details.poster_path ? <img src={`${config.url}${config.size.big}${details.poster_path}`} className="float-left pr-2"/> : ''}
       <dl>
-        <dd>Rating:</dd>
+        <dd className="float-left mb-0 mr-2">Rating:</dd>
         <dt>{details.vote_average} ({details.vote_count} votes)</dt>
-        <dd>Genres:</dd>
+        <dd className="float-left mb-0 mr-2">Genres:</dd>
         <dt>{details.genres.map(genre => genre.name).join(', ')}</dt>
-        <dd>Release date:</dd>
+        <dd className="float-left mb-0 mr-2">Release date:</dd>
         <dt>{details.release_date}</dt>
       </dl>
-      {details.poster_path ? <img src={`${config.url}${config.size.big}${details.poster_path}`}/> : ''}
-      <p>{details.overview}</p>
+      <p className="text-justify m-0">{details.overview}</p>
     </article>
   }
 }

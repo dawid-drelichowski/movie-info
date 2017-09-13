@@ -25,12 +25,12 @@ export default class Movie extends Component {
   render () {
     const config = this.props.config.movieDb.images,
       data = this.props.data
-    return <li onClick={this.toggleDetails} className="list-group-item">
+    return <li onClick={this.toggleDetails} className="list-group-item list-group-item-action movie">
       <strong>{data.title}</strong>
-      {data.poster_path ? <img
-        src={`${config.url}${config.size.small}${data.poster_path}`}
+      {data.backdrop_path ? <img
+        src={`${config.url}${config.size.small}${data.backdrop_path}`}
         alt={data.title}
-        className="rounded img-thumbnail float-right"
+        className="rounded float-right"
       /> : ''}
       {this.state.detailsVisible ? <MovieDetails config={this.props.config} details={this.state.details}/> : ''}
     </li>

@@ -1,9 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Movie details component should have image 1`] = `
-<article>
+<article
+  className="py-3"
+>
+  <img
+    className="float-left pr-2"
+    src="https://image.mock.api/big/q0R4crx2SehcEEQEkYObktdeFy.jpg"
+  />
   <dl>
-    <dd>
+    <dd
+      className="float-left mb-0 mr-2"
+    >
       Rating:
     </dd>
     <dt>
@@ -12,32 +20,40 @@ exports[`Movie details component should have image 1`] = `
       4412
        votes)
     </dt>
-    <dd>
+    <dd
+      className="float-left mb-0 mr-2"
+    >
       Genres:
     </dd>
     <dt>
       Family, Animation, Adventure, Comedy
     </dt>
-    <dd>
+    <dd
+      className="float-left mb-0 mr-2"
+    >
       Release date:
     </dd>
     <dt>
       2015-06-17
     </dt>
   </dl>
-  <img
-    src="https://image.mock.api/big/q0R4crx2SehcEEQEkYObktdeFy.jpg"
-  />
-  <p>
+  <p
+    className="text-justify m-0"
+  >
     Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill, a super-villain who, alongside her inventor husband Herb, hatches a plot to take over the world.
   </p>
 </article>
 `;
 
 exports[`Movie details component shouldn't have image 1`] = `
-<article>
+<article
+  className="py-3"
+>
+  
   <dl>
-    <dd>
+    <dd
+      className="float-left mb-0 mr-2"
+    >
       Rating:
     </dd>
     <dt>
@@ -46,21 +62,26 @@ exports[`Movie details component shouldn't have image 1`] = `
       4412
        votes)
     </dt>
-    <dd>
+    <dd
+      className="float-left mb-0 mr-2"
+    >
       Genres:
     </dd>
     <dt>
       Family, Animation, Adventure, Comedy
     </dt>
-    <dd>
+    <dd
+      className="float-left mb-0 mr-2"
+    >
       Release date:
     </dd>
     <dt>
       2015-06-17
     </dt>
   </dl>
-  
-  <p>
+  <p
+    className="text-justify m-0"
+  >
     Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill, a super-villain who, alongside her inventor husband Herb, hatches a plot to take over the world.
   </p>
 </article>

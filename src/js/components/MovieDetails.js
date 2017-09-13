@@ -7,10 +7,9 @@ export default class MovieDetails extends Component {
     details: PropTypes.object.isRequired
   }
   render () {
-    const config = this.props.config.movieDb.images,
-      details = this.props.details
+    const details = this.props.details
     return <article className="py-3">
-      {details.poster_path ? <img src={`${config.url}${config.size.big}${details.poster_path}`} className="float-left pr-2"/> : ''}
+      {details.poster_path ? this.renderImage() : ''}
       <dl>
         <dd className="float-left mb-0 mr-2">Rating:</dd>
         <dt>{details.vote_average} ({details.vote_count} votes)</dt>
@@ -21,5 +20,9 @@ export default class MovieDetails extends Component {
       </dl>
       <p className="text-justify m-0">{details.overview}</p>
     </article>
+  }
+  renderImage () {
+    const config = this.props.config.movieDb.images
+    return <img src={`${config.url}${config.size.big}${this.props.details.poster_path}`} className="float-left pr-2"/>
   }
 }

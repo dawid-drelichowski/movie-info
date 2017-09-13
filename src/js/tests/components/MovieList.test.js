@@ -7,9 +7,7 @@ import repository from 'tests/mocks/repository'
 
 describe('Movie list component', () => {
   function getRenderedComponent (movies) {
-    return renderer.create(
-      <MovieList config={config} repository={repository} movies={movies} />
-    )
+    return renderer.create(<MovieList config={config} repository={repository} movies={movies} />)
   }
 
   it('should be empty', () => {

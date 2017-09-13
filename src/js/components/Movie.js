@@ -23,16 +23,23 @@ export default class Movie extends Component {
     this.setState(state)
   }
   render () {
-    const config = this.props.config.movieDb.images,
-      data = this.props.data
+    const data = this.props.data
     return <li onClick={this.toggleDetails} className="list-group-item list-group-item-action movie">
       <strong>{data.title}</strong>
-      {data.backdrop_path ? <img
-        src={`${config.url}${config.size.small}${data.backdrop_path}`}
-        alt={data.title}
-        className="rounded float-right"
-      /> : ''}
-      {this.state.detailsVisible ? <MovieDetails config={this.props.config} details={this.state.details}/> : ''}
+      {data.backdrop_path ? this.renderImage() : ''}
+      {this.state.detailsVisible ? this.renderMovieDetails() : ''}
     </li>
+  }
+  renderImage () {
+    const config = this.props.config.movieDb.images,
+      data = this.props.data
+    return <img
+      src={`${config.url}${config.size.small}${data.backdrop_path}`}
+      alt={data.title}
+      className="rounded float-right"
+    />
+  }
+  renderMovieDetails () {
+    return <MovieDetails config={this.props.config} details={this.state.details}/>
   }
 }

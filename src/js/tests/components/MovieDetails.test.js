@@ -6,12 +6,10 @@ import movie from 'tests/mocks/movie.json'
 
 describe('Movie details component', () => {
   function getRenderedComponent (details) {
-    return renderer.create(
-      <MovieDetails config={config} details={details} />
-    )
+    return renderer.create(<MovieDetails config={config} details={details} />)
   }
 
-  it('shouldn\'t have image', () => {
+  it("shouldn't have image", () => {
     expect(getRenderedComponent({...movie, poster_path: undefined}).toJSON()).toMatchSnapshot()
   })
 

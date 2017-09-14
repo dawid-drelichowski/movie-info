@@ -2,7 +2,7 @@
   "name": "movie-info",
   "title": "Movie info",
   "description": "The Movie DB based ",
-  "version": "0.9",
+  "version": "0.9.0",
   "author": {
     "name": "Dawid Drelichowski"
   },

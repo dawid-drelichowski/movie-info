@@ -11,7 +11,6 @@ export default class Movie extends Component {
   state = {detailsVisible: false, details: null}
   toggleDetails = async () => {
     const state = {detailsVisible: false}
-
     if (this.state.detailsVisible) {
       this.setState(state)
       return

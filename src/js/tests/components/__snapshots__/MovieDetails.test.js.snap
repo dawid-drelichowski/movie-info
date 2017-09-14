@@ -45,7 +45,7 @@ exports[`Movie details component should have image 1`] = `
 </article>
 `;
 
-exports[`Movie details component shouldn't have image 1`] = `
+exports[`Movie details component should not have image 1`] = `
 <article
   className="py-3"
 >

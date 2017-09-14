@@ -9,7 +9,7 @@ describe('Movie details component', () => {
     return renderer.create(<MovieDetails config={config} details={details} />)
   }
 
-  it("shouldn't have image", () => {
+  it('should not have image', () => {
     expect(getRenderedComponent({...movie, poster_path: undefined}).toJSON()).toMatchSnapshot()
   })
 

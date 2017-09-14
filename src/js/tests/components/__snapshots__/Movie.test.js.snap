@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie component should have image 1`] = `
+<li
+  className="list-group-item list-group-item-action movie"
+  onClick={[Function]}
+>
+  <strong>
+    Minions
+  </strong>
+  <img
+    alt="Minions"
+    className="rounded float-right"
+    src="https://image.mock.api/small/uX7LXnsC7bZJZjn048UCOwkPXWJ.jpg"
+  />
+  
+</li>
+`;
+
+exports[`Movie component should not have image 1`] = `
+<li
+  className="list-group-item list-group-item-action movie"
+  onClick={[Function]}
+>
+  <strong>
+    Minions
+  </strong>
+  
+  
+</li>
+`;

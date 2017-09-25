@@ -29,9 +29,11 @@ Command: `npm test` or `yarn test`
 To rebuild assets every time they change execute `npm run build:dev` or `yarn run build:dev`.  
 There is a better way: `npm run watch` or `yarn run watch` command will continue running in terminal and watch all relevant files for changes.  
 [Webpack](https://webpack.js.org/) will then automatically recompile assets when it detects a change.  
+It's possible to use [Webpack DevServer](https://webpack.js.org/configuration/dev-server/). To start it use `npm run start` or `yarn run start`  
+To specify a port number to listen for requests on, modify [webpack.config.babel.js](webpack.config.babel.js)  
+Default server port is *3000*.  
 
 Minified (so called "production") version of assets can be build with `npm run build` or `yarn run build`.
-
 
 ## NPM scripts
 
@@ -39,6 +41,7 @@ Available [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/lang/en/) 
 
 * `npm run build` or `yarn run build` combine related scripts/styles and minimizes them with [Webpack](https://webpack.js.org/).
 * `npm run build:dev` or `yarn run build:dev` combine related scripts/styles with [Webpack](https://webpack.js.org/).
+* `npm start` or `yarn start` runs [Webpack DevServer](https://webpack.js.org/configuration/dev-server/).
 * `npm run lint` or `yarn run lint` runs [ESLint](http://eslint.org/) source code check.
 * `npm test` or `yarn test` runs tests.
 * `npm run watch` or `npm run watch` runs combination of related scripts/styles in [Webpack's watch mode](https://webpack.js.org/api/cli/#watch-options).

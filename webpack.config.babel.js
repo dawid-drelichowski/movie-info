@@ -21,5 +21,10 @@ export default {
       {test: /\.js$/, exclude: /node_modules|config.json/, loader: 'babel-loader'}
     ]
   },
-  plugins: [new ExtractTextPlugin('css/[name].css')]
+  plugins: [new ExtractTextPlugin('css/[name].css')],
+  devServer: {
+    contentBase: __dirname,
+    compress: true,
+    port: 3000
+  }
 }

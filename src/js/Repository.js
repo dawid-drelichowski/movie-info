@@ -4,16 +4,14 @@ export default class {
     this.config = config
   }
   async searchMoviesByQuery (query) {
-    const config = this.config.movieDb
     if (query) {
-      return this.fetch(`${config.url}search/movie?api_key=${config.apiKey}&query=${query}`)
+      return this.fetch(this.getSearchMoviesByQueryUrl(query))
     }
     return false
   }
   async findMovieById (id) {
-    const config = this.config.movieDb
     if (id) {
-      return this.fetch(`${config.url}movie/${id}?api_key=${config.apiKey}`)
+      return this.fetch(this.getFindMovieByIdUrl(id))
     }
     return false
   }
@@ -28,5 +26,16 @@ export default class {
       console.log(error)
       return false
     }
+  }
+  getSearchMoviesByQueryUrl (query) {
+    const config = this.getMovieDbConfig()
+    return `${config.url}search/movie?api_key=${config.apiKey}&query=${query}`
+  }
+  getFindMovieByIdUrl (id) {
+    const config = this.getMovieDbConfig()
+    return `${config.url}movie/${id}?api_key=${config.apiKey}`
+  }
+  getMovieDbConfig () {
+    return this.config.movieDb
   }
 }

@@ -6,12 +6,12 @@ exports[`Movie component should have image 1`] = `
   onClick={[Function]}
 >
   <strong>
-    Minions
+    Title
   </strong>
   <img
-    alt="Minions"
+    alt="Title"
     className="rounded float-right"
-    src="https://image.mock.api/small/uX7LXnsC7bZJZjn048UCOwkPXWJ.jpg"
+    src="https://image.mock.api/small/image-path.jpg"
   />
   
 </li>
@@ -23,7 +23,7 @@ exports[`Movie component should not have image 1`] = `
   onClick={[Function]}
 >
   <strong>
-    Minions
+    Title
   </strong>
   
   

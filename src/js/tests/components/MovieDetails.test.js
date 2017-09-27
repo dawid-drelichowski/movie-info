@@ -1,19 +1,19 @@
 import React from 'react'
 import MovieDetails from 'components/MovieDetails'
-import renderer from 'react-test-renderer'
+import getModel from 'tests/mocks/helpers/models/movieDetails'
 import config from 'tests/mocks/config.json'
-import movie from 'tests/mocks/movie.json'
+import renderer from 'react-test-renderer'
 
 describe('Movie details component', () => {
-  function getRenderedComponent (details) {
-    return renderer.create(<MovieDetails config={config} details={details} />)
+  function getRenderedComponent (model = getModel()) {
+    return renderer.create(<MovieDetails config={config} model={model} />)
   }
 
   it('should not have image', () => {
-    expect(getRenderedComponent({...movie, poster_path: undefined}).toJSON()).toMatchSnapshot()
+    expect(getRenderedComponent(getModel('')).toJSON()).toMatchSnapshot()
   })
 
   it('should have image', () => {
-    expect(getRenderedComponent(movie).toJSON()).toMatchSnapshot()
+    expect(getRenderedComponent(getModel()).toJSON()).toMatchSnapshot()
   })
 })

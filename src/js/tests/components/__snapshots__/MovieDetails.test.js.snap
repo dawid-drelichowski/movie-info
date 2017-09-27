@@ -5,8 +5,9 @@ exports[`Movie details component should have image 1`] = `
   className="py-3"
 >
   <img
+    alt="Title"
     className="float-left pr-2"
-    src="https://image.mock.api/big/q0R4crx2SehcEEQEkYObktdeFy.jpg"
+    src="https://image.mock.api/big/image-path.jpg"
   />
   <dl>
     <dd
@@ -15,9 +16,9 @@ exports[`Movie details component should have image 1`] = `
       Rating:
     </dd>
     <dt>
-      6.4
+      1.1
        (
-      4412
+      1
        votes)
     </dt>
     <dd
@@ -26,7 +27,7 @@ exports[`Movie details component should have image 1`] = `
       Genres:
     </dd>
     <dt>
-      Family, Animation, Adventure, Comedy
+      First, Second
     </dt>
     <dd
       className="float-left mb-0 mr-2"
@@ -34,13 +35,13 @@ exports[`Movie details component should have image 1`] = `
       Release date:
     </dd>
     <dt>
-      2015-06-17
+      2017-01-01
     </dt>
   </dl>
   <p
     className="text-justify m-0"
   >
-    Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill, a super-villain who, alongside her inventor husband Herb, hatches a plot to take over the world.
+    Overview
   </p>
 </article>
 `;
@@ -57,9 +58,9 @@ exports[`Movie details component should not have image 1`] = `
       Rating:
     </dd>
     <dt>
-      6.4
+      1.1
        (
-      4412
+      1
        votes)
     </dt>
     <dd
@@ -68,7 +69,7 @@ exports[`Movie details component should not have image 1`] = `
       Genres:
     </dd>
     <dt>
-      Family, Animation, Adventure, Comedy
+      First, Second
     </dt>
     <dd
       className="float-left mb-0 mr-2"
@@ -76,13 +77,13 @@ exports[`Movie details component should not have image 1`] = `
       Release date:
     </dd>
     <dt>
-      2015-06-17
+      2017-01-01
     </dt>
   </dl>
   <p
     className="text-justify m-0"
   >
-    Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill, a super-villain who, alongside her inventor husband Herb, hatches a plot to take over the world.
+    Overview
   </p>
 </article>
 `;

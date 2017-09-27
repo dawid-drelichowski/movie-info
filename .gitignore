@@ -1,5 +1,6 @@
 .idea/
-dist/
+public/js/*
+public/css/*
 node_modules/
 .DS_Store
 /config.json

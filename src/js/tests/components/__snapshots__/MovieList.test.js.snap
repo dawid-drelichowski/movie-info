@@ -12,7 +12,7 @@ exports[`Movie list component should be empty 1`] = `
 </div>
 `;
 
-exports[`Movie list component should contain 4 movies 1`] = `
+exports[`Movie list component should contain 2 movies 1`] = `
 <div
   className="form-row mt-3"
 >
@@ -24,12 +24,12 @@ exports[`Movie list component should contain 4 movies 1`] = `
       onClick={[Function]}
     >
       <strong>
-        Minions
+        Title
       </strong>
       <img
-        alt="Minions"
+        alt="Title"
         className="rounded float-right"
-        src="https://image.mock.api/small/uX7LXnsC7bZJZjn048UCOwkPXWJ.jpg"
+        src="https://image.mock.api/small/image-path.jpg"
       />
       
     </li>
@@ -38,40 +38,12 @@ exports[`Movie list component should contain 4 movies 1`] = `
       onClick={[Function]}
     >
       <strong>
-        Minions: Competition
+        Other
       </strong>
       <img
-        alt="Minions: Competition"
+        alt="Other"
         className="rounded float-right"
-        src="https://image.mock.api/small/rsxhLIqVwMxlas5QoXSHcahPyOa.jpg"
-      />
-      
-    </li>
-    <li
-      className="list-group-item list-group-item-action movie"
-      onClick={[Function]}
-    >
-      <strong>
-        Mower Minions
-      </strong>
-      <img
-        alt="Mower Minions"
-        className="rounded float-right"
-        src="https://image.mock.api/small/2r2pw6qR9E84t21NHxbYXzoEFpi.jpg"
-      />
-      
-    </li>
-    <li
-      className="list-group-item list-group-item-action movie"
-      onClick={[Function]}
-    >
-      <strong>
-        Minions: Puppy
-      </strong>
-      <img
-        alt="Minions: Puppy"
-        className="rounded float-right"
-        src="https://image.mock.api/small/eAKzsYVHiC0bSNudVo9IgREurmm.jpg"
+        src="https://image.mock.api/small/image-path.jpg"
       />
       
     </li>

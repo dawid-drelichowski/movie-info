@@ -5,10 +5,14 @@ import MovieDetails from 'components/MovieDetails'
 export default class Movie extends Component {
   static propTypes = {
     config: PropTypes.object.isRequired,
-    repository: PropTypes.object.isRequired,
-    data: PropTypes.object.isRequired
+    service: PropTypes.object.isRequired,
+    model: PropTypes.object.isRequired
   }
   state = {detailsVisible: false, details: null}
+  getImageUrl () {
+    const config = this.props.config.movieDb.images
+    return `${config.url}${config.size.small}`
+  }
   toggleDetails = async () => {
     const state = {detailsVisible: false}
     if (this.state.detailsVisible) {
@@ -17,28 +21,27 @@ export default class Movie extends Component {
     }
     state.detailsVisible = true
     if (!this.state.details) {
-      state.details = await this.props.repository.findMovieById(this.props.data.id)
+      state.details = await this.props.service.findById(this.props.model.id)
     }
     this.setState(state)
   }
   render () {
-    const data = this.props.data
+    const model = this.props.model
     return <li onClick={this.toggleDetails} className="list-group-item list-group-item-action movie">
-      <strong>{data.title}</strong>
-      {data.backdrop_path ? this.renderImage() : ''}
+      <strong>{model.title}</strong>
+      {model.imagePath ? this.renderImage() : ''}
       {this.state.detailsVisible ? this.renderMovieDetails() : ''}
     </li>
   }
   renderImage () {
-    const config = this.props.config.movieDb.images,
-      data = this.props.data
+    const model = this.props.model
     return <img
-      src={`${config.url}${config.size.small}${data.backdrop_path}`}
-      alt={data.title}
+      src={`${this.getImageUrl()}${model.imagePath}`}
+      alt={model.title}
       className="rounded float-right"
     />
   }
   renderMovieDetails () {
-    return <MovieDetails config={this.props.config} details={this.state.details}/>
+    return <MovieDetails config={this.props.config} model={this.state.details}/>
   }
 }

@@ -1,6 +1,8 @@
 import path from 'path'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
+const publicPath = path.join(__dirname, 'public')
+
 export default {
   entry: [
     './node_modules/bootstrap/dist/css/bootstrap.css',
@@ -9,7 +11,7 @@ export default {
     './src/js/index.js'
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: publicPath,
     filename: 'js/[name].js'
   },
   resolve: {
@@ -23,7 +25,7 @@ export default {
   },
   plugins: [new ExtractTextPlugin('css/[name].css')],
   devServer: {
-    contentBase: __dirname,
+    contentBase: publicPath,
     compress: true,
     port: 3000
   }

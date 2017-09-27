@@ -1,13 +1,13 @@
 import search from 'tests/mocks/search.json'
 import movie from 'tests/mocks/movie.json'
 
-class Repository {
-  async searchMoviesByQuery () {
+class Movie {
+  async searchByQuery () {
     return search
   }
-  async findMovieById () {
+  async findById () {
     return movie
   }
 }
 
-export default new Repository()
+export default new Movie()

@@ -5,11 +5,16 @@ import Movie from 'components/Movie'
 export default class MovieList extends Component {
   static propTypes = {
     config: PropTypes.object.isRequired,
-    repository: PropTypes.object.isRequired,
-    movies: PropTypes.object
+    service: PropTypes.object.isRequired,
+    collection: PropTypes.oneOfType([PropTypes.bool, PropTypes.array])
   }
   static defaultProps = {
-    movies: {}
+    collection: false
+  }
+  static renderNoMovie () {
+    return <li className="list-group-item">
+      <strong>There are no movies that matched your query.</strong>
+    </li>
   }
   render () {
     return <div className="form-row mt-3">
@@ -19,20 +24,15 @@ export default class MovieList extends Component {
     </div>
   }
   renderList () {
-    if (!Object.keys(this.props.movies).length) {
+    if (this.props.collection === false) {
       return ''
     }
-    if (this.props.movies.total_results > 0) {
-      return this.props.movies.results.map(movie => this.renderMovie(movie))
+    if (this.props.collection.length) {
+      return this.props.collection.map(model => this.renderMovie(model))
     }
-    return this.renderNoMovie()
+    return this.constructor.renderNoMovie()
   }
-  renderMovie (movie) {
-    return <Movie key={movie.id} config={this.props.config} repository={this.props.repository} data={movie}/>
-  }
-  renderNoMovie () {
-    return <li className="list-group-item">
-      <strong>There are no movies that matched your query.</strong>
-    </li>
+  renderMovie (model) {
+    return <Movie key={model.id} config={this.props.config} service={this.props.service} model={model}/>
   }
 }

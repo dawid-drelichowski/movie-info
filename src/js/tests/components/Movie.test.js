@@ -1,30 +1,30 @@
 import React from 'react'
 import Movie from 'components/Movie'
+import getModel from 'tests/mocks/helpers/models/movie'
+import config from 'tests/mocks/config.json'
+import service from 'tests/mocks/services/Movie'
 import renderer from 'react-test-renderer'
 import {shallow} from 'enzyme'
-import config from 'tests/mocks/config.json'
-import repository from 'tests/mocks/repository'
-import search from 'tests/mocks/search.json'
 
 describe('Movie component', () => {
-  function getRenderedComponent (data) {
-    return renderer.create(<Movie config={config} repository={repository} data={data}/>)
+  function getRenderedComponent (model = getModel()) {
+    return renderer.create(<Movie config={config} service={service} model={model}/>)
   }
 
-  function getShallowComponent (data) {
-    return shallow(<Movie config={config} repository={repository} data={data}/>)
+  function getShallowComponent (model = getModel()) {
+    return shallow(<Movie config={config} service={service} model={model}/>)
   }
 
   it('should not have image', () => {
-    expect(getRenderedComponent({...search.results[0], backdrop_path: undefined}).toJSON()).toMatchSnapshot()
+    expect(getRenderedComponent(getModel(1, 'Title', '')).toJSON()).toMatchSnapshot()
   })
 
   it('should have image', () => {
-    expect(getRenderedComponent(search.results[0]).toJSON()).toMatchSnapshot()
+    expect(getRenderedComponent().toJSON()).toMatchSnapshot()
   })
 
   it('should have details', async () => {
-    const wrapper = getShallowComponent(search.results[0])
+    const wrapper = getShallowComponent()
     await wrapper.instance().toggleDetails()
     expect(wrapper.find('MovieDetails').exists()).toBeTruthy()
   })

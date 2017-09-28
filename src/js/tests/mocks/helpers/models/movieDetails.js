@@ -1,22 +1,37 @@
 import Model from 'models/MovieDetails'
-import Genre from 'models/MovieGenre'
+import getGenre from 'tests/mocks/helpers/models/movieGenre'
 
-function getGenre (id = 1, name = 'First') {
-  const model = new Genre()
-  model.id = id
-  model.name = name
-  return model
+export function mapProperties (data) {
+  return {
+    id: data.id,
+    title: data.title,
+    imagePath: data.poster_path,
+    averageVote: data.vote_average,
+    voteCount: data.vote_count,
+    genres: data.genres,
+    releaseDate: data.release_date,
+    overview: data.overview
+  }
 }
 
-export default function (imagePath = '/image-path.jpg') {
+export default function ({
+  id = 1,
+  title = 'Title',
+  imagePath = '/image-path.jpg',
+  averageVote = 1.1,
+  voteCount = 1,
+  genres = [{id: 1, name: 'First'}, {id: 2, name: 'Second'}],
+  releaseDate = '2017-01-01',
+  overview = 'Overview'
+} = {}) {
   const model = new Model()
-  model.id = 1
-  model.title = 'Title'
+  model.id = id
+  model.title = title
   model.imagePath = imagePath
-  model.averageVote = 1.1
-  model.voteCount = 1
-  model.genres = [getGenre(), getGenre(2, 'Second')]
-  model.releaseDate = '2017-01-01'
-  model.overview = 'Overview'
+  model.averageVote = averageVote
+  model.voteCount = voteCount
+  model.genres = genres.map(genre => getGenre(genre))
+  model.releaseDate = releaseDate
+  model.overview = overview
   return model
 }

@@ -16,7 +16,7 @@ describe('Movie component', () => {
   }
 
   it('should not have image', () => {
-    expect(getRenderedComponent(getModel(1, 'Title', '')).toJSON()).toMatchSnapshot()
+    expect(getRenderedComponent(getModel({id: 1, title: 'Title', imagePath: ''})).toJSON()).toMatchSnapshot()
   })
 
   it('should have image', () => {

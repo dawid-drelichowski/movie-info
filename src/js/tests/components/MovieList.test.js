@@ -19,6 +19,6 @@ describe('Movie list component', () => {
   })
 
   it('should contain 2 movies', () => {
-    expect(getRenderedComponent([getModel(), getModel(2, 'Other')]).toJSON()).toMatchSnapshot()
+    expect(getRenderedComponent([getModel(), getModel({id: 2, title: 'Other'})]).toJSON()).toMatchSnapshot()
   })
 })

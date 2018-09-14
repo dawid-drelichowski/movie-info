@@ -1,5 +1,5 @@
 # Web movie search engine [![Build Status](https://travis-ci.org/dawid-drelichowski/movie-info.svg?branch=master)](https://travis-ci.org/dawid-drelichowski/movie-info) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
-[movie-search.co.nf](http://movie-search.co.nf/) - simple [Movie DB API](https://www.themoviedb.org/documentation/api/) and [React](https://facebook.github.io/react/) based movie search engine. 
+[movie-info-pwa.firebaseapp.com](https://movie-info-pwa.firebaseapp.com/) - simple [Movie DB API](https://www.themoviedb.org/documentation/api/) and [React](https://facebook.github.io/react/) based movie search engine. 
 
 ## Requirements
 

@@ -1,6 +1,13 @@
+.DS_Store
 .idea/
+
 public/js/*
 public/css/*
+
 node_modules/
-.DS_Store
 /config.json
+
+.firebase
+.firebaserc
+firebase.json
+public/404.html

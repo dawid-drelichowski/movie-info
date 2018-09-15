@@ -1,5 +1,5 @@
 import path from 'path'
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 const publicPath = path.join(__dirname, 'public')
 
@@ -19,11 +19,11 @@ export default {
   },
   module: {
     rules: [
-      {test: /\.css$/, use: ExtractTextPlugin.extract({fallback: 'style-loader', use: 'css-loader'})},
+      {test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader']},
       {test: /\.js$/, exclude: /node_modules|config.json/, loader: 'babel-loader'}
     ]
   },
-  plugins: [new ExtractTextPlugin('css/[name].css')],
+  plugins: [new MiniCssExtractPlugin({filename: 'css/[name].css'})],
   devServer: {
     contentBase: publicPath,
     compress: true,

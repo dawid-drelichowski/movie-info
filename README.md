@@ -39,9 +39,9 @@ Minified (so called "production") version of assets can be build with `npm run b
 
 Available [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/lang/en/) scripts:
 
-* `npm run build` or `yarn run build` combine related scripts/styles and minimizes them with [Webpack](https://webpack.js.org/).
-* `npm run build:dev` or `yarn run build:dev` combine related scripts/styles with [Webpack](https://webpack.js.org/).
+* `npm run build` or `yarn build` combine related scripts/styles and minimizes them with [Webpack](https://webpack.js.org/).
+* `npm run build:dev` or `yarn build:dev` combine related scripts/styles with [Webpack](https://webpack.js.org/).
 * `npm start` or `yarn start` runs [Webpack DevServer](https://webpack.js.org/configuration/dev-server/).
-* `npm run lint` or `yarn run lint` runs [ESLint](http://eslint.org/) source code check.
+* `npm run lint` or `yarn lint` runs [ESLint](http://eslint.org/) source code check.
 * `npm test` or `yarn test` runs tests.
-* `npm run watch` or `npm run watch` runs combination of related scripts/styles in [Webpack's watch mode](https://webpack.js.org/api/cli/#watch-options).
+* `npm run watch` or `yarn watch` runs combination of related scripts/styles in [Webpack's watch mode](https://webpack.js.org/api/cli/#watch-options).

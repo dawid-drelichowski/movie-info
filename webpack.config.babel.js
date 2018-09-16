@@ -1,5 +1,7 @@
 import path from 'path'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
+import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin'
 
 const publicPath = path.join(__dirname, 'public')
 
@@ -24,6 +26,16 @@ export default {
     ]
   },
   plugins: [new MiniCssExtractPlugin({filename: 'css/[name].css'})],
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true // set to true if you want JS source maps
+      }),
+      new OptimizeCssAssetsPlugin()
+    ]
+  },
   devServer: {
     contentBase: publicPath,
     compress: true,

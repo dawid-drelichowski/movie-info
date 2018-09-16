@@ -6,12 +6,15 @@ import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin'
 const publicPath = path.join(__dirname, 'public')
 
 export default {
-  entry: [
-    './node_modules/bootstrap/dist/css/bootstrap.css',
-    './src/css/main.css',
-    'babel-polyfill',
-    './src/js/index.js'
-  ],
+  entry: {
+    main: [
+      './node_modules/bootstrap/dist/css/bootstrap.css',
+      './src/css/main.css',
+      'babel-polyfill',
+      './src/js/index.js'
+    ],
+    serviceWorker: './src/js/serviceWorker.js'
+  },
   output: {
     path: publicPath,
     filename: 'js/[name].js'

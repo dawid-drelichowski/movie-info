@@ -11,3 +11,6 @@ ReactDOM.render(
   <App config={config} service={service}/>,
   document.getElementById('movie-info')
 )
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/js/serviceWorker.js')
+}

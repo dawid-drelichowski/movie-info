@@ -12,5 +12,5 @@ ReactDOM.render(
   document.getElementById('movie-info')
 )
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/js/serviceWorker.js')
+  navigator.serviceWorker.register('/serviceWorker.js')
 }

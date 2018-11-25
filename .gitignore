@@ -3,6 +3,7 @@
 
 public/js/*
 public/css/*
+public/serviceWorker.js
 
 node_modules/
 /config.json

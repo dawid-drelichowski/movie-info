@@ -59,6 +59,9 @@ export default [
       path: publicPath,
       filename: '[name].js'
     },
+    resolve: {
+      modules: [__dirname, 'node_modules']
+    },
     optimization: {
       minimizer: [terserWebpackPlugin]
     }

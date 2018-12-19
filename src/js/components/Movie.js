@@ -14,16 +14,19 @@ export default class Movie extends Component {
     return `${config.url}${config.size.small}`
   }
   toggleDetails = async () => {
-    const state = {detailsVisible: false}
     if (this.state.detailsVisible) {
-      this.setState(state)
+      this.setState({detailsVisible: false})
       return
     }
-    state.detailsVisible = true
-    if (!this.state.details) {
-      state.details = await this.props.service.findById(this.props.model.id)
+
+    if (this.state.details) {
+      this.setState({detailsVisible: true})
     }
-    this.setState(state)
+
+    const details = await this.props.service.findById(this.props.model.id)
+    if (details) {
+      this.setState({detailsVisible: true, details})
+    }
   }
   render () {
     const model = this.props.model

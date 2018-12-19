@@ -1,3 +1,10 @@
+/*
+  @todo:
+    - movies and movie images cache separation
+    - cache validation, cache cleaing, available disk space checking
+    - worker update testing
+    - usage of babel, webpack configuration, migration to async/await
+ */
 import config from 'config.json'
 
 self.addEventListener('install', event => {
@@ -32,8 +39,8 @@ self.addEventListener('fetch', event => {
             cache.put(event.request.url, response.clone())
             return response
           })
-          .catch(() => { // @todo: create fallback for missing cache entries
-            return caches.match(event.request)
+          .catch(error => {
+            return caches.match(event.request) || error
           })
       })
     )

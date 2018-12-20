@@ -9,5 +9,25 @@
         "big": "w154"
       }
     }
+  },
+  "serviceWorker": {
+    "caches": {
+      "assets": {
+        "name": "assets-1",
+        "files": [
+          "/",
+          "/index.html",
+          "/css/main.css",
+          "/js/main.js"
+        ]
+
+      },
+      "movies": {
+        "name": "movies-1"
+      },
+      "images": {
+        "name": "images-1"
+      }
+    }
   }
 }

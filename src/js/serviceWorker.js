@@ -1,12 +1,26 @@
 /*
   @todo:
-    - movies and movie images cache refactoring (find common parts)
     - cache validation, cache cleaing, available disk space checking
     - worker update testing
     - usage of babel, webpack configuration, migration to async/await
     - tests
  */
 import config from 'config.json'
+
+const fetchAndCacheAndRespond = (event, cacheName) => {
+  event.respondWith(
+    caches.open(cacheName).then(cache => {
+      return fetch(event.request)
+        .then(response => {
+          cache.put(event.request.url, response.clone())
+          return response
+        })
+        .catch(error => {
+          return caches.match(event.request) || error
+        })
+    })
+  )
+}
 
 self.addEventListener('install', event => {
   event.waitUntil(
@@ -35,32 +49,10 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   switch (true) {
     case event.request.url.indexOf(config.movieDb.url) > -1:
-      event.respondWith(
-        caches.open(config.serviceWorker.caches.movies.name).then(cache => {
-          return fetch(event.request)
-            .then(response => {
-              cache.put(event.request.url, response.clone())
-              return response
-            })
-            .catch(error => {
-              return caches.match(event.request) || error
-            })
-        })
-      )
+      fetchAndCacheAndRespond(event, config.serviceWorker.caches.movies.name)
       break
     case event.request.url.indexOf(config.movieDb.images.url) > -1:
-      event.respondWith(
-        caches.open(config.serviceWorker.caches.images.name).then(cache => {
-          return fetch(event.request)
-            .then(response => {
-              cache.put(event.request.url, response.clone())
-              return response
-            })
-            .catch(error => {
-              return caches.match(event.request) || error
-            })
-        })
-      )
+      fetchAndCacheAndRespond(event, config.serviceWorker.caches.movies.name)
       break
     default:
       event.respondWith(
